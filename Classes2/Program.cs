@@ -38,11 +38,20 @@ namespace Classes2
 
 
             Post stackPost = new Post();
+            stackPost.Title = "C# question about classes";
+            stackPost.Description = "What are the classes in C# and how to you them? Teach me please!";
             stackPost.VoteUp();
             stackPost.VoteUp();
             stackPost.VoteUp();
             stackPost.VoteDown();
-            Console.WriteLine(stackPost.Votes);
+            var votes = stackPost.GetVotes();
+            Console.WriteLine(votes);
+            Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine(stackPost.Title);
+            Console.WriteLine(stackPost.Description);
+            Console.WriteLine("Date: "+ stackPost.Creation);
+            Console.WriteLine("Number of votes: " + votes  );
             Console.ReadLine();
 
 

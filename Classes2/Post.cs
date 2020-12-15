@@ -10,16 +10,14 @@ namespace Classes2
     {
         //Properties: Title, Description, DateTime when was created
 
-        // change in votes: from outside not should be able to modiify vote -
-        //create a readonly field, which will be assigned here in class from VOte
         public string Title { get; set; }
         public string  Description { get; set; }
-        private DateTime Creation { get; set; }
-        public int Votes { get; set; }
+        public DateTime Creation { get; set; }
+        private int Votes { get; set; }
         //Methods: Vote up, Vote down, see  current vote value
 
 
-        public Post()
+        public  Post()
         {
             Votes = 0;
             Creation = DateTime.Now;
@@ -36,5 +34,11 @@ namespace Classes2
             Votes--;
         }
 
+        public int GetVotes()
+        {
+            int votes = Votes;
+            return votes;
+         
+        }
     }
 }
