@@ -45,6 +45,19 @@ namespace Polymorphism
             real-world, SQL Server provides an API for opening or closing a connection to a database. But
             for this exercise, we don’t need to worry about it.
              */
+
+            OracleConnection connection = new OracleConnection("oracleDbConnection");
+            connection.OpenDbConnection();
+            Console.ReadLine();
+            connection.CloseDbConnection();
+            Console.ReadLine();
+
+
+            SqlConnection connection2 = new SqlConnection("sqlDbConnection");
+            connection2.OpenDbConnection();
+            Console.ReadLine();
+            connection2.CloseDbConnection();
+            Console.ReadLine();
         }
     }
 }

@@ -15,14 +15,12 @@ namespace Polymorphism
         }
         public override void OpenDbConnection()
         {
-            // if connection string eleje nem tartalmaz 'SQL', akkor nem jo
-
-            // if valamennyi timespan, akkor kiirja h nem sikerult
+            Console.WriteLine("SQL database connection opened");   
         }
 
         public override void CloseDbConnection()
         {
-            
+            Console.WriteLine("SQL database connection closed");
         }
     }
 }
