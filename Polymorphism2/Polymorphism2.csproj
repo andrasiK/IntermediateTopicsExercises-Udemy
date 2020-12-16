@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbCommand.cs" />
+    <Compile Include="DbConnection\DbConnection.cs" />
+    <Compile Include="DbConnection\OracleConnection.cs" />
+    <Compile Include="DbConnection\SqlConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
