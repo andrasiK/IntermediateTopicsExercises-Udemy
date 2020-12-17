@@ -46,7 +46,12 @@ namespace Interfaces
  */
 
 
+            // Workflow engine class - processes a workflow object ; 1 method: Run()
 
+            // Workflow class - consists of a series of steps / activities ; needs to be extensible ;Calls the 
+            // Activites class Execute() method  
+
+            // Activity class - have a common Interface 
 
         }
     }
