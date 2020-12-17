@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace Interfaces
 {
-    class WorkFlowEngine
+    class ChangeToProcessing : IActivity
     {
-        WorkFlow WorkFlow { get; set; }
-
-        public WorkFlowEngine()
+        public void Execute()
         {
-
-        }
-        public void Run(WorkFlow w)
-        { 
-        
+            Console.WriteLine("Status of the video set to 'Processing in the database'");
         }
     }
 }

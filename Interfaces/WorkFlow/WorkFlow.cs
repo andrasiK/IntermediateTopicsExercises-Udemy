@@ -8,20 +8,14 @@ namespace Interfaces
 {
     public class WorkFlow
     {
-        public string Name { get; set; }
-        public Activity Activity { get; set; }
+     //   public string Name { get; set; }
 
-        public WorkFlow()
+        public List<IActivity> Activities { get; }
+
+        public WorkFlow(List<IActivity> activites)
         {
-
+            Activities = activites;
         }
-
-        public void Run()
-        { 
-        
-        }
-
-
 
     }
 }

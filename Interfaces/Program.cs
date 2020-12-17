@@ -44,14 +44,23 @@ namespace Interfaces
             Your focus should be on sending a workflow to the workflow engine and having it run the
             workflow and all the activities inside it. We don’t care about the actual activities. 
  */
+           // Activites
+            VideoUpload vUpload = new VideoUpload();
+            CallEncodingService callEncoding = new CallEncodingService();
+            EmailNotif mailNotification = new EmailNotif();
+            ChangeToProcessing processing = new ChangeToProcessing();
 
+           // make a workflow 
+            List<IActivity> activites = new List<IActivity> {vUpload,callEncoding,mailNotification,processing };
+            WorkFlow videoEncoding = new WorkFlow(activites);
 
-            // Workflow engine class - processes a workflow object ; 1 method: Run()
+           // WorkFlowEngine
+            WorkFlowEngine videoWorkFlow = new WorkFlowEngine(videoEncoding);
+            videoWorkFlow.Run();
 
-            // Workflow class - consists of a series of steps / activities ; needs to be extensible ;Calls the 
-            // Activites class Execute() method  
+            Console.ReadLine();
 
-            // Activity class - have a common Interface 
+           
 
         }
     }

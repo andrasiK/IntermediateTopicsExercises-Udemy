@@ -5,19 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Interfaces
+
 {
-    class Activity : IActivity
+    class EmailNotif : IActivity
     {
-
-        public string Name { get; set; }
-
-        public Activity()
-        {
-
-        }
         public void Execute()
-        { 
-         
+        {
+            Console.WriteLine("Email notification sent to owner of the video successfully");
+            System.Threading.Thread.Sleep(5000);
         }
+
     }
 }
