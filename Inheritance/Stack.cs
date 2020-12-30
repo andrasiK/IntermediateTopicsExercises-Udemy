@@ -8,40 +8,50 @@ namespace Inheritance
 {
    public class Stack
     {
+       
 
         // Properties
-        private List<object> stackList { get; set; }
+        private List<object> StackList { get; set; }
 
         public Stack()
         {
-            stackList = new List<object> { };
+            StackList = new List<object> { };
+           
         }
 
         // Methods
         public void Push(object obj)
         {
-            if (obj == null)
+            try
             {
-                throw new InvalidOperationException("Null value passed as a parameter");
+                if (obj == null)
+                {
+                    throw new InvalidOperationException();
+                }
+                else
+                {
+                    StackList.Add(obj);
+                }
             }
-            else
+            catch (InvalidOperationException)
             {
-                stackList.Add(obj);
+                Console.WriteLine("Can't pass NULL value!");
             }
+            
             
         }
         public object Pop()
         {
-            var upperElement = stackList.Last();
+            var upperElement = StackList.Last();
 
-            var index = (stackList.Count()) - 1;
-            stackList.RemoveAt(index);
+            var index = (StackList.Count()) - 1;
+            StackList.RemoveAt(index);
             return upperElement;
         }
 
         public void Clear()
         {
-            stackList.Clear();
+            StackList.Clear();
         }
     }
 }
